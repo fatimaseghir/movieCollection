@@ -49,38 +49,38 @@ function addItemToHTML(array $dataFromQuery, array $genres, array $distributors,
             !isset($itemFromQuery['release_date_streaming']) ||
             !isset($itemFromQuery['runtime']) ||
             !isset($itemFromQuery['distributor'])
-        ) {throw new InvalidArgumentException('Set the values');
+        ) {
+            throw new InvalidArgumentException('Set the values');
         }
             if (!isset($itemFromQuery['img_location'])) {
                 $itemFromQuery['img_location'] = 'images/dune.jpeg';
             }
 
             $genrename='';
-            foreach($genres as $genre){
-                if ($genre['id'] === $itemFromQuery['genre']){
-                    $genrename=$genre['genre1'];
+            foreach ($genres as $genre) {
+                if ($genre['id'] === $itemFromQuery['genre']) {
+                    $genrename = $genre['genre1'];
                     break;
                 }
-            }
+             }
 
             $languagename='';
-            foreach($languages as $language){
-               if ($language['id'] === $itemFromQuery['original_language']){
-                   $languagename=$language['original_language1'];
+            foreach ($languages as $language) {
+               if ($language['id'] === $itemFromQuery['original_language']) {
+                   $languagename = $language['original_language1'];
                    break;
                }
-           }
+             }
 
             $distributorname='';
-            foreach($distributors as $distributor){
-                if ($distributor['id'] === $itemFromQuery['distributor']){
-                    $distributorname=$distributor['distributor1'];
+            foreach ($distributors as $distributor) {
+                if ($distributor['id'] === $itemFromQuery['distributor']) {
+                    $distributorname = $distributor['distributor1'];
                     break;
                 }
-            }
+             }
 
             $result .=
-
                 '<div class = "itemContainer">
                 <h2 id="title" >Title: ' . $itemFromQuery['title'] . '</h2>
                 <p>Director: ' . $itemFromQuery['director'] . '</p>
@@ -98,7 +98,7 @@ function addItemToHTML(array $dataFromQuery, array $genres, array $distributors,
             </div>';
         }
     return $result;
-    }
+}
 
 function extract_genres_from_db(PDO $db): array {
     $query = $db->prepare('SELECT `id`,`genre1` FROM `filmgenre`;');
@@ -111,15 +111,15 @@ function extract_originalLanguage_from_db(PDO $db): array {
     $query->execute();
     return $query->fetchAll();
 }
+
 function extract_distributor_from_db(PDO $db): array {
     $query = $db->prepare('SELECT `id`,`distributor1` FROM `filmdistributor`;');
     $query->execute();
     return $query->fetchAll();
 }
 
-function add_to_db(array $postArray,PDO $db) {
+function add_to_db(array $postArray, PDO $db) {
     $query = $db->prepare('INSERT INTO `films` (`title`, `genre`, `original_language`, `director`, `producer`, `writer`, `release_date_theatres`, `release_date_streaming`,`runtime` ,`distributor`) 
             VALUES (:title, :genre, :original_language, :director, :producer, :writer, :release_date_theatres, :release_date_streaming , :runtime, :distributor);');
     $query->execute($postArray);
 }
-
