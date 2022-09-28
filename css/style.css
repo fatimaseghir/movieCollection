@@ -23,18 +23,27 @@ main {
     gap: 2rem;
 }
 
+.userForm {
+ padding-top: 2rem;
+}
+
+label {
+    padding: 2rem;
+}
+
 img {
-    width:4rem;
+    width: 4rem;
 }
 
 .userForm h1 {
-    color :white;
+    color: #EEEEEE;
 }
 
 #title {
     margin-bottom: 2rem;
 }
-#form{
+
+#form {
     margin-bottom: 2rem;
 }
 
@@ -42,6 +51,7 @@ img {
     margin-bottom: 2rem;
     padding-right: 2rem;
 }
+
 #director {
     margin-bottom: 2rem;
     padding-right: 2rem;
@@ -51,7 +61,7 @@ img {
     background-color: #F9F9F9;
     text-align: center;
     padding-bottom: 4rem;
-    height:  9rem;
+    height: 9rem;
     color: #73777B;
     font-weight: 800;
 }
@@ -66,11 +76,14 @@ img {
     font-weight: 200;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+}
 
 .submit {
     margin-bottom: 2rem;
 }
-
 
 .container {
     padding-top: 2rem;
@@ -103,10 +116,10 @@ footer {
     color: #73777B;
     height: 6rem;
 }
+
 .home {
     margin-left: 2rem;
 }
-
 
 @media screen and (min-width: 800px) {
 
@@ -142,13 +155,13 @@ footer {
         display:flex;
         flex-wrap: wrap;
         align-items: center;
-
     }
+
     .home {
         margin-left: 2rem;
     }
+
     .text {
         margin-left: 40%;
-
     }
 }

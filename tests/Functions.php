@@ -22,9 +22,9 @@ class Functions extends TestCase
             'img_location'=>'images/dune.jpeg'
         ]];
 
-        $genres= [['id' => 1, 'genre1' => 'Drama']];
-        $distributors=[['id'=> 1, 'distributor1' => 'Columbia Pictures']];
-        $languages=[['id' => 1, 'original_language1' => 'English']];
+        $genres = [['id' => 1, 'genre1' => 'Drama']];
+        $distributors = [['id'=> 1, 'distributor1' => 'Columbia Pictures']];
+        $languages = [['id' => 1, 'original_language1' => 'English']];
 
         $expected =
             '<div class = "itemContainer">
@@ -44,7 +44,7 @@ class Functions extends TestCase
             </div>';
 
         // act,
-        $result =addItemToHTML($input, $genres, $distributors, $languages);
+        $result = addItemToHTML($input, $genres, $distributors, $languages);
 
         // assert - compare the expected result to the actual result
         $this -> assertEquals($expected, $result); //method
@@ -53,21 +53,22 @@ class Functions extends TestCase
     public function test2AddItemToHTML_GivenArrayWithNoValuesThrowError()
     {
         $input = [[]];
-        $genres= ['id'=>1, 'genre1'=>'Drama'];
-        $distributors=['Columbia Pictures'];
-        $languages=['English'];
+        $genres = ['id'=>1, 'genre1'=>'Drama'];
+        $distributors = ['Columbia Pictures'];
+        $languages = ['English'];
 
         $this->expectException(InvalidArgumentException::class);
         $this->expectErrorMessage('Set the values');
         $result = addItemToHTML($input, $genres, $distributors,$languages);
     }
+    
     public function test3AddItemToHTML_GivenIntThrowError()
     {
         $input = 1;
 
-        $genres= ['Drama'];
-        $distributors=['Columbia Pictures'];
-        $languages=['English'];
+        $genres = ['Drama'];
+        $distributors = ['Columbia Pictures'];
+        $languages = ['English'];
         $this->expectException(TypeError::class);
 
         $result = addItemToHTML($input, $genres, $distributors,$languages);

@@ -62,16 +62,15 @@ function addItemToHTML(array $dataFromQuery, array $genres, array $distributors,
             $genrename='';
             foreach($genres as $genre){
 
-                if ($genre['id']==$itemFromQuery['genre']){
+                if ($genre['id'] === $itemFromQuery['genre']){
                     $genrename=$genre['genre1'];
                     break;
                 }
             }
 
             $languagename='';
-           foreach($languages as $language){
-
-               if ($language['id']===$itemFromQuery['original_language']){
+            foreach($languages as $language){
+               if ($language['id'] === $itemFromQuery['original_language']){
                    $languagename=$language['original_language1'];
                    break;
                }
@@ -79,8 +78,7 @@ function addItemToHTML(array $dataFromQuery, array $genres, array $distributors,
 
             $distributorname='';
             foreach($distributors as $distributor){
-
-                if ($distributor['id']===$itemFromQuery['distributor']){
+                if ($distributor['id'] === $itemFromQuery['distributor']){
                     $distributorname=$distributor['distributor1'];
                     break;
                 }
