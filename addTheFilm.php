@@ -28,7 +28,7 @@ $distributors = extract_distributor_from_db($db);
 <main class="newFilm" >
     <a name="newFilm"> </a>
     <div class = "userForm"><br><br>
-        <h1>Add the film to the film collection  </h1><br><br>
+        <h1 id="form">Add the film to the film collection  </h1>
         <form method="POST" action="addToDb.php">
             <label for="title">Title:</label><br>
             <input type="text" class="title" name="title" placeholder="e.g. Dune" required><br><br>

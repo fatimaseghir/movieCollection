@@ -4,8 +4,9 @@
 }
 
 p, h1, h2 {
-    margin: 0;
+
     font-weight: 200;
+    margin: 0;
 }
 
 body {
@@ -18,17 +19,38 @@ main {
     background: url("https://wallpapercave.com/wp/wp4780947.jpg");
 }
 
+.welcome h1 {
+    padding-top: 2rem;
+    gap: 2rem;
+}
+
 img {
     width:4rem;
 }
+
 .userForm h1 {
     color :white;
+}
+
+#title {
+    margin-bottom: 2rem;
+}
+#form{
+    margin-bottom: 2rem;
+}
+
+#title {
+    margin-bottom: 2rem;
+    padding-right: 2rem;
+}
+#director {
+    margin-bottom: 2rem;
+    padding-right: 2rem;
 }
 
 .titleBar {
     background-color: #F9F9F9;
     text-align: center;
-    padding-top: 2rem;
     padding-bottom: 4rem;
     height:  9rem;
     color: #73777B;
@@ -39,6 +61,7 @@ img {
     text-decoration: none;
     background-color: #EFEFEF;
     padding-right: 2rem;
+    color: #73777B;
     padding-left: 2rem;
     border-radius: 10px;
     font-weight: 200;

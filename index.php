@@ -27,9 +27,9 @@ require('functions.php');
 <div class="titleBar">
     <div class="welcome">
         <h1>Film Collection</h1>
-        <p>Welcome to my film collection!</p> <br>
+        <p>Welcome to my film collection!</p>
     </div>
-    <a class="newFilm" href="addTheFilm.php">+ Add more films</a>
+    <a id="newFilm" class="newFilm" href="addTheFilm.php">+ Add more films</a>
 </div>
 <main>
 <div class="container">

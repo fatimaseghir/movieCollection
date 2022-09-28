@@ -89,7 +89,7 @@ function addItemToHTML(array $dataFromQuery, array $genres, array $distributors,
             $result .=
 
                 '<div class = "itemContainer">
-                <h2>Title: ' . $itemFromQuery['title'] . '</h2> <br>
+                <h2 id="title" >Title: ' . $itemFromQuery['title'] . '</h2>
                 <p>Director: ' . $itemFromQuery['director'] . '</p>
                 <p>Producer: ' . $itemFromQuery['producer'] . '</p>
                 <p>Writer: ' . $itemFromQuery['writer'] . '</p>
