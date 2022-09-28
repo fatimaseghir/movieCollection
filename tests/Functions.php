@@ -61,7 +61,7 @@ class Functions extends TestCase
         $this->expectErrorMessage('Set the values');
         $result = addItemToHTML($input, $genres, $distributors,$languages);
     }
-    
+
     public function test3AddItemToHTML_GivenIntThrowError()
     {
         $input = 1;
