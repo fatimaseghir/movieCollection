@@ -22,6 +22,10 @@ main {
     gap: 2rem;
 }
 
+.welcome {
+    gap: 1rem;
+}
+
 .userForm {
     padding-top: 2rem;
     color: #FFFFFF;
@@ -41,20 +45,11 @@ img {
 
 #title {
     margin-bottom: 2rem;
+    padding-right: 2rem;
 }
 
 #form {
     margin-bottom: 2rem;
-}
-
-#title {
-    margin-bottom: 2rem;
-    padding-right: 2rem;
-}
-
-#director {
-    margin-bottom: 2rem;
-    padding-right: 2rem;
 }
 
 .titleBar {
@@ -74,10 +69,6 @@ img {
     padding-left: 2rem;
     border-radius: 10px;
     font-weight: 200;
-}
-
-.title {
-    margin-bottom: 2rem;
 }
 
 .submit {
@@ -158,10 +149,6 @@ footer {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-    }
-
-    .home {
-        margin-left: 2rem;
     }
 
     .text {
