@@ -43,6 +43,7 @@ require('functions.php');
 </main>
 <footer class="goToTop">
     <a href="#Film"> <img src="images/video.png"  alt="" class="home"> </a>
-    <div class="text"> © 2022 Fatima Stanley </div> </footer>
+    <div class="text"> © 2022 Fatima Stanley </div>
+</footer>
 </body>
 
