@@ -19,8 +19,8 @@ function connectToDatabase(): PDO
     }
     return $pdo;
 }
-$pdo = connectToDatabase();
 
+$pdo = connectToDatabase();
 
 function getFilms(PDO $pdo): array
 {
@@ -32,16 +32,12 @@ function getFilms(PDO $pdo): array
     return $query->fetchAll();
 }
 
-
 $filmsStatsArray = getFilms($pdo);
-
-
 
 function addItemToHTML(array $dataFromQuery, array $genres, array $distributors, array $languages): string
 {
     $result = '';
     foreach ($dataFromQuery as $itemFromQuery) {
-
         if (
             !isset($itemFromQuery['title']) ||
             !isset($itemFromQuery['genre']) ||
@@ -61,7 +57,6 @@ function addItemToHTML(array $dataFromQuery, array $genres, array $distributors,
 
             $genrename='';
             foreach($genres as $genre){
-
                 if ($genre['id'] === $itemFromQuery['genre']){
                     $genrename=$genre['genre1'];
                     break;
@@ -104,9 +99,6 @@ function addItemToHTML(array $dataFromQuery, array $genres, array $distributors,
         }
     return $result;
     }
-
-
-
 
 function extract_genres_from_db(PDO $db): array {
     $query = $db->prepare('SELECT `id`,`genre1` FROM `filmgenre`;');
