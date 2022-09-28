@@ -57,7 +57,7 @@ $distributors = extract_distributor_from_db($db);
                 <?php foreach($distributors as $distributor){
                     echo '<option value="' . $distributor['id'] . '">' . $distributor['distributor1'] . '</option>';
                 }; ?>
-            </select><br><br>
+            </select><br>
 
 
 
@@ -74,4 +74,5 @@ $distributors = extract_distributor_from_db($db);
 </body>
 <footer class="goToTop">
     <a href="#newFilm"> <img src="images/video.png"  alt="" class="home"> </a>
-    <div class="text"> © 2022 Fatima Stanley </div> </footer>
+    <div class="text"> © 2022 Fatima Stanley </div>
+</footer>

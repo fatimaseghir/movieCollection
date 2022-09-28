@@ -1,8 +1,6 @@
 <?php
-
 require_once '../functions.php';
 use PHPUnit\Framework\TestCase;
-
 
 class Functions extends TestCase
 {
@@ -24,9 +22,9 @@ class Functions extends TestCase
             'img_location'=>'images/dune.jpeg'
         ]];
 
-        $genres= [['id'=>1, 'genre1'=>'Drama']];
-        $distributors=[['id'=>1, 'distributor1'=>'Columbia Pictures']];
-        $languages=[['id'=>1, 'original_language1'=>'English']];
+        $genres= [['id' => 1, 'genre1' => 'Drama']];
+        $distributors=[['id'=> 1, 'distributor1' => 'Columbia Pictures']];
+        $languages=[['id' => 1, 'original_language1' => 'English']];
 
         $expected =
             '<div class = "itemContainer">
@@ -46,7 +44,6 @@ class Functions extends TestCase
             </div>';
 
         // act,
-
         $result =addItemToHTML($input, $genres, $distributors, $languages);
 
         // assert - compare the expected result to the actual result

@@ -1,7 +1,5 @@
 <?php
 require('functions.php');
-
-
 ?>
 
 <!DOCTYPE html>
@@ -43,7 +41,8 @@ require('functions.php');
    ?>
 </div>
 </main>
-</body>
 <footer class="goToTop">
     <a href="#Film"> <img src="images/video.png"  alt="" class="home"> </a>
     <div class="text"> © 2022 Fatima Stanley </div> </footer>
+</body>
+
