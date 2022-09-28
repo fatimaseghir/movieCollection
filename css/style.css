@@ -24,7 +24,7 @@ main {
 }
 
 .userForm {
- padding-top: 2rem;
+    padding-top: 2rem;
 }
 
 label {
@@ -108,7 +108,7 @@ img {
     padding-left: 1rem;
     color: #EEEEEE;
     padding-top: 1rem;
-    gap:0.5rem;
+    gap: 0.5rem;
 }
 
 footer {
@@ -152,7 +152,7 @@ footer {
     }
 
     .goToTop {
-        display:flex;
+        display: flex;
         flex-wrap: wrap;
         align-items: center;
     }
