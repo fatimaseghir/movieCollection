@@ -11,7 +11,6 @@ p, h1, h2 {
 body {
     width: 100%;
     height: auto;
-    color: #F9F9F9;
 }
 
 main {
@@ -25,6 +24,7 @@ main {
 
 .userForm {
     padding-top: 2rem;
+    color: #FFFFFF;
 }
 
 label {
@@ -36,7 +36,7 @@ img {
 }
 
 .userForm h1 {
-    color: #EEEEEE;
+    color: #FFFFFF;
 }
 
 #title {
@@ -76,13 +76,16 @@ img {
     font-weight: 200;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
+.title {
+    margin-bottom: 2rem;
 }
 
 .submit {
     margin-bottom: 2rem;
+}
+
+.form1 {
+    padding-bottom: 2rem;
 }
 
 .container {
