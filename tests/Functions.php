@@ -73,17 +73,4 @@ class Functions extends TestCase
 
         $result = addItemToHTML($input, $genres, $distributors,$languages);
     }
-
-    public function test3AddItemToHTML_GivenIntThrowError()
-    {
-        $input = 1;
-
-        $genres = ['Drama'];
-        $distributors = ['Columbia Pictures'];
-        $languages = ['English'];
-        $this->expectException(TypeError::class);
-
-        $result = addItemToHTML($input, $genres, $distributors,$languages);
-    }
-
 }
