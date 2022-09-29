@@ -1,5 +1,4 @@
 <?php
-//connect to database and return the $pdo connection as a variable --> to write a docblock
 function connectToDatabase(): PDO
 {
     $host = 'db';
@@ -119,7 +118,32 @@ function extract_distributor_from_db(PDO $db): array {
 }
 
 function add_to_db(array $postArray, PDO $db) {
-    $query = $db->prepare('INSERT INTO `films` (`title`, `genre`, `original_language`, `director`, `producer`, `writer`, `release_date_theatres`, `release_date_streaming`,`runtime` ,`distributor`) 
-            VALUES (:title, :genre, :original_language, :director, :producer, :writer, :release_date_theatres, :release_date_streaming , :runtime, :distributor);');
+    $query = $db->prepare('INSERT INTO `films` (
+                     `title`,
+                     `genre`,
+                     `original_language`,
+                     `director`,
+                     `producer`,
+                     `writer`, 
+                     `release_date_theatres`,
+                     `release_date_streaming`,
+                     `runtime`,
+                     `distributor`) 
+     VALUES (:title,
+             :genre,
+             :original_language,
+             :director,
+             :producer,
+             :writer,
+             :release_date_theatres,
+             :release_date_streaming,
+             :runtime,
+             :distributor);');
     $query->execute($postArray);
+}
+
+function validateDate($date, $format = 'Y-m-d'): bool
+{
+    $d = DateTime::createFromFormat($format, $date);
+    return $d && $d->format($format) === $date;
 }

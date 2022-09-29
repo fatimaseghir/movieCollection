@@ -17,18 +17,30 @@ main {
     background: url("https://wallpapercave.com/wp/wp4780947.jpg");
 }
 
+.welcome {
+    gap: 1rem;
+}
+
 .welcome h1 {
     padding-top: 2rem;
     gap: 2rem;
 }
 
-.welcome {
-    gap: 1rem;
-}
-
 .userForm {
     padding-top: 2rem;
     color: #FFFFFF;
+}
+
+.userForm h1 {
+    color: #FFFFFF;
+}
+
+#form {
+    margin-bottom: 2rem;
+}
+
+.form1 {
+    padding-bottom: 2rem;
 }
 
 label {
@@ -39,17 +51,9 @@ img {
     width: 4rem;
 }
 
-.userForm h1 {
-    color: #FFFFFF;
-}
-
 #title {
     margin-bottom: 2rem;
     padding-right: 2rem;
-}
-
-#form {
-    margin-bottom: 2rem;
 }
 
 .titleBar {
@@ -65,9 +69,9 @@ img {
     text-decoration: none;
     background-color: #EFEFEF;
     padding-right: 2rem;
-    color: #73777B;
-    padding-left: 2rem;
+    padding-left: 1rem;
     border-radius: 10px;
+    color: #73777B;
     font-weight: 200;
 }
 
@@ -75,20 +79,16 @@ img {
     margin-bottom: 2rem;
 }
 
-.form1 {
-    padding-bottom: 2rem;
-}
-
 .container {
+    width: 100%;
     padding-top: 2rem;
     padding-left: 2rem;
-    width: 100%;
 }
 
 .itemImg img {
-    margin-top: 1rem;
     width: 45vw;
     height: 35vh;
+    margin-top: 1rem;
     margin-left: 4rem;
     margin-bottom: 1rem;
 }
@@ -97,11 +97,11 @@ img {
     width: 85vw;
     height: auto;
     background-color: rgba(0, 0, 0, 0.55);
-    border-radius: 10px;
     margin-bottom: 2rem;
     padding-left: 1rem;
-    color: #EEEEEE;
     padding-top: 1rem;
+    border-radius: 10px;
+    color: #EEEEEE;
     gap: 0.5rem;
 }
 
@@ -119,6 +119,7 @@ footer {
 
     .container {
         padding-top: 3.5rem;
+
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -126,9 +127,9 @@ footer {
     }
 
     .itemImg img {
-        margin-top: 1rem;
         width: 15rem;
         height: 18rem;
+        margin-top: 1rem;
         margin-left: 4rem;
         margin-bottom: 1rem;
     }
@@ -138,11 +139,12 @@ footer {
         height: auto;
         background-color: rgba(0, 0, 0, 0.55);
         border-radius: 10px;
-        flex-direction: column;
-        justify-content: space-between;
         margin-bottom: 2rem;
         padding-left: 2rem;
         color: #EEEEEE;
+
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     .goToTop {

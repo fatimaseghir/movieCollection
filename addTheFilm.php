@@ -1,6 +1,6 @@
 <?php
-require('functions.php');
-$db = connectToDatabase('filmcoll');
+require_once 'functions.php';
+$db = connectToDatabase();
 $genres = extract_genres_from_db($db);
 $languages = extract_originalLanguage_from_db($db);
 $distributors = extract_distributor_from_db($db);
@@ -27,10 +27,10 @@ $distributors = extract_distributor_from_db($db);
     <a name="newFilm"> </a>
     <div class = "userForm">
         <h1 id="form">Add the film to the film collection</h1>
-        <form class="form" method="POST" action="addToDb.php">
+        <form class="form" method="post" action="addToDB.php">
             <div class="form1">
-            <label for="title">Title:</label>
-            <input type="text" name="title" placeholder="e.g. Dune" required>
+                <label for="title">Title:</label>
+                <input type="text" name="title" placeholder="e.g. Dune" required>
             </div>
             <div class="form1">
             <label for="director">Director:</label>
@@ -55,7 +55,7 @@ $distributors = extract_distributor_from_db($db);
 
             <div class="form1">
             <label for="language">Language:</label>
-            <select id="language" name="language" required>
+            <select id="language" name="original_language" required>
                 <?php foreach($languages as $language){
                     echo '<option value="' . $language['id'] . '">' . $language['original_language1'] . '</option>';
                 }; ?>
@@ -83,7 +83,7 @@ $distributors = extract_distributor_from_db($db);
             <label for="runtime">Runtime:</label>
             <input type="text" class="runtime" name="runtime" placeholder="-" required>
             </div>
-            <input type="submit" class="submit">
+            <input type="submit" value="submit" class="submit">
         </form>
 </main>
 <footer class="goToTop">
