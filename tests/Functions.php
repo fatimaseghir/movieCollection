@@ -4,17 +4,15 @@ use PHPUnit\Framework\TestCase;
 
 class Functions extends TestCase
 {
-    //Success test
     public function test1AddItemToHTML_GivenArrayExpectPrintedInHTML()
     {
-        // arrange
         $input = [[
-            'title' => 'dune',
+            'title' => 'a',
             'genre' => 1,
             'original_language' => 1,
-            'director' => 'kkwkwkkw',
-            'producer' => 'ywyw',
-            'writer' => 'qgwgw',
+            'director' => 'a',
+            'producer' => 'a',
+            'writer' => 'a',
             'release_date_theatres' => '2000-01-20',
             'release_date_streaming' => '2000-01-20',
             'runtime' => 109,
@@ -28,10 +26,10 @@ class Functions extends TestCase
 
         $expected =
             '<div class = "itemContainer">
-                <h2>Title: dune</h2> <br>
-                <p>Director: kkwkwkkw</p>
-                <p>Producer: ywyw</p>
-                <p>Writer: qgwgw</p>
+                <h2 id="title" >Title: a</h2>
+                <p>Director: a</p>
+                <p>Producer: a</p>
+                <p>Writer: a</p>
                 <p>Genre: Drama</p>
                 <p>Original Language: English</p>
                 <p>Distributor: Columbia Pictures</p>
@@ -43,11 +41,8 @@ class Functions extends TestCase
                 </div>
             </div>';
 
-        // act,
         $result = addItemToHTML($input, $genres, $distributors, $languages);
-
-        // assert - compare the expected result to the actual result
-        $this -> assertEquals($expected, $result); //method
+        $this -> assertEquals($expected, $result);
     }
 
     public function test2AddItemToHTML_GivenArrayWithNoValuesThrowError()
@@ -69,8 +64,35 @@ class Functions extends TestCase
         $genres = ['Drama'];
         $distributors = ['Columbia Pictures'];
         $languages = ['English'];
+        
         $this->expectException(TypeError::class);
-
         $result = addItemToHTML($input, $genres, $distributors,$languages);
+    }
+
+    public function test4validateDate_GivenDateExpectTrue()
+    {
+        $input = '1998-11-12';
+        $expected = true;
+
+        $result = validateDate($input, $format = 'Y-m-d');
+        $this -> assertEquals($expected, $result); //method
+    }
+
+    public function test5validateDate_GivenDateExpectFalse()
+    {
+        $input = '1998-15-12';
+        $expected = false;
+
+        $result = validateDate($input, $format = 'Y-m-d');
+        $this -> assertEquals($expected, $result); //method
+    }
+
+    public function test6validateDate_GivenIntSetDate()
+    {
+        $input = 5;
+        $expected = false;
+
+        $result = validateDate($input, $format = 'Y-m-d');
+        $this -> assertEquals($expected, $result); //method
     }
 }
