@@ -141,3 +141,9 @@ function add_to_db(array $postArray, PDO $db) {
              :distributor);');
     $query->execute($postArray);
 }
+
+function validateDate($date, $format = 'Y-m-d'): bool
+{
+    $d = DateTime::createFromFormat($format, $date);
+    return $d && $d->format($format) === $date;
+}
