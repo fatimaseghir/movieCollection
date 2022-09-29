@@ -5,8 +5,6 @@ require('functions.php');
 <!DOCTYPE html>
 <html lang="en">
 
-<!--  head section -->
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -32,7 +30,7 @@ require('functions.php');
 <main>
 <div class="container">
 <?php
-   $db = connectToDatabase('filmcoll');
+   $db = connectToDatabase();
    $films = getFilms($db);
    $genres = extract_genres_from_db($db);
    $languages = extract_originalLanguage_from_db($db);
