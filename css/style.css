@@ -17,18 +17,30 @@ main {
     background: url("https://wallpapercave.com/wp/wp4780947.jpg");
 }
 
+.welcome {
+    gap: 1rem;
+}
+
 .welcome h1 {
     padding-top: 2rem;
     gap: 2rem;
 }
 
-.welcome {
-    gap: 1rem;
-}
-
 .userForm {
     padding-top: 2rem;
     color: #FFFFFF;
+}
+
+.userForm h1 {
+    color: #FFFFFF;
+}
+
+#form {
+    margin-bottom: 2rem;
+}
+
+.form1 {
+    padding-bottom: 2rem;
 }
 
 label {
@@ -39,17 +51,9 @@ img {
     width: 4rem;
 }
 
-.userForm h1 {
-    color: #FFFFFF;
-}
-
 #title {
     margin-bottom: 2rem;
     padding-right: 2rem;
-}
-
-#form {
-    margin-bottom: 2rem;
 }
 
 .titleBar {
@@ -66,17 +70,13 @@ img {
     background-color: #EFEFEF;
     padding-right: 2rem;
     color: #73777B;
-    padding-left: 2rem;
+    padding-left: 1rem;
     border-radius: 10px;
     font-weight: 200;
 }
 
 .submit {
     margin-bottom: 2rem;
-}
-
-.form1 {
-    padding-bottom: 2rem;
 }
 
 .container {
