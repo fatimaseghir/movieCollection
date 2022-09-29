@@ -17,6 +17,12 @@ if (isset($_POST['title']) &&
     if (!isset($itemFromQuery['img_location'])) {
         $itemFromQuery['img_location'] = 'images/dune.jpeg';
     }
+    if (!validateDate($_POST['release_date_theatres'])) {
+        $_POST['release_date_theatres'] = '2000-01-01';
+    }
+    if (!validateDate($_POST['release_date_streaming'])) {
+        $_POST['release_date_streaming'] = '2000-01-01';
+    }
     $db = connectToDatabase();
     add_to_db($_POST, $db);
     header('location: index.php');
